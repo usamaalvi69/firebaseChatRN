@@ -6,3 +6,4 @@ export * from './AnimatedBtn/AnimatedBtn';
 export * from './FadeText/FadeText';
 export * from './Divider/OrDivider';
 export * from './Microsoft/MicrosoftSignInButton';
+export * from './MyStatusNar';
