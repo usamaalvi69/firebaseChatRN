@@ -19,6 +19,7 @@ This is a React Native chat application with Firebase & Microsoft authentication
 ### Messages List & Chat Screen
 - Real-time chat with messages stored in **Firebase Realtime Database**.
 - Messages include sender's name, text, and timestamp.
+- "Typing indicator" when a user is typing.
 - Messages appear in chronological order (latest at the bottom).
 - Redux is used for state management.
 
