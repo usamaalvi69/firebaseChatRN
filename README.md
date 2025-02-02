@@ -102,8 +102,8 @@ To enable Microsoft authentication using Firebase Authentication, follow these s
    ```
 ## Notes
 - This project is currently set up for **iOS only**.
-- The app uses **Firebase** for authentication and real-time messaging.
-- **Apple Developer Account** is **not required** for connecting Firebase, but is necessary for deploying to the App Store.
+- The app uses **Firebase** for authentication and Realtime Database.
+
 
 
 
