@@ -1,8 +1,5 @@
 # Firebase Chat App (iOS Only)
 
-## Overview
-This is a React Native chat application with Firebase authentication and real-time messaging. It is currently set up for.
-
 
 ## Screenshots
 <div style="display: flex; justify-content: space-between; gap: 10px;">
@@ -11,10 +8,11 @@ This is a React Native chat application with Firebase authentication and real-ti
   <img src="src/assets/app_screenshots/chat.png" width="30%">
 </div>
 
-
+## Overview
+This is a React Native chat application with Firebase & Microsoft authentication and real-time messaging.
 ## Features
 ### Authentication Screen
-- Firebase authentication using email and password.
+- Firebase authentication using email and password/Microsoft.
 - Form validation with **Formik** and **Yup**.
 - Authentication state management with **Redux Toolkit**.
 
@@ -35,13 +33,13 @@ Ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone <repo-url>
+   git clone <https://github.com/usamaalvi69/firebaseChatRN.git>
    cd firebaseChatRN
    ```
 
 2. Install dependencies:
    ```sh
-   npm install
+   yarn install
    ```
 
 3. Install CocoaPods dependencies:
@@ -67,7 +65,7 @@ npx react-native run-ios
 ```
 ## Microsoft Authentication Setup
 
-To enable Microsoft authentication in your React Native app using Firebase Authentication, follow these steps:
+To enable Microsoft authentication using Firebase Authentication, follow these steps:
 
 ### 1. **Set up Microsoft Authentication in Firebase Console**:
    - Go to the [Firebase Console](https://console.firebase.google.com/).
@@ -81,7 +79,7 @@ To enable Microsoft authentication in your React Native app using Firebase Authe
    > **Note**: Currently, Microsoft may not be allowing the registration of new applications through their portal. If you encounter this issue, ensure that you have access to an existing registered application or reach out to Microsoft support to resolve the issue.
 
 ### 3. **Update the Code with Microsoft Authentication in Login**:
-   In your code, implement the Microsoft authentication flow like this:
+   screens/Login:
 
    ```tsx
    const handleMicrosoftSignIn = async () => {
