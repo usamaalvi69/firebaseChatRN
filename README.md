@@ -102,7 +102,7 @@ To enable Microsoft authentication using Firebase Authentication, follow these s
    ```
 ## Notes
 - This project is currently set up for **iOS only**.
-- The app uses **Firebase** for authentication and Realtime Database.
+- The app uses Firebase for authentication and the Realtime Database to store registered users and chat messages.
 
 
 
