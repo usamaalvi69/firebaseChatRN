@@ -10,7 +10,7 @@ import {COLLECTIONS, updateLastMessage} from '../../utils/collections';
 import {FirebaseMessage} from './types';
 import {setLastMessage} from '../../redux/chat/chatSlice';
 
-// ✅ Function to listen for messages
+// Function to listen for messages
 export const useMessageListener = (
   ref: any,
   setMessages: (messages: IMessage[]) => void,
@@ -45,7 +45,7 @@ export const useMessageListener = (
   );
 };
 
-// ✅ Function to send messages
+// Function to send messages
 export const sendMessage = async (
   text: string,
   id: string,
