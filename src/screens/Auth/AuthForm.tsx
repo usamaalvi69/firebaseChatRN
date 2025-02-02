@@ -3,7 +3,12 @@ import {Pressable, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {validationSchema} from './validation';
 
-import {AnimatedButton, Input} from '../../components';
+import {
+  AnimatedButton,
+  Input,
+  MicrosoftSignInButton,
+  OrDivider,
+} from '../../components';
 import {STRINGS} from '../../utils/strings';
 import {styles} from './styles';
 
@@ -45,6 +50,10 @@ export const AuthForm: React.FC<FormProps> = ({
             isSubmitting={isSubmitting}
             handleSubmit={handleSubmit}
           />
+
+          <OrDivider />
+
+          <MicrosoftSignInButton />
 
           <View style={styles.toggle}>
             <Text style={styles.joinUs}>

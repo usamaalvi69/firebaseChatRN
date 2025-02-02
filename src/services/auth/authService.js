@@ -5,13 +5,13 @@ import database from "@react-native-firebase/database";
 /**
  * Sign up a new user with email and password
  */
-export const signUp = async (email, password) => {
+export const signUp = async (email, password, dispatch) => {
     try {
       const userCredential = await auth().createUserWithEmailAndPassword(email, password);
       const user = userCredential.user; // Extract user from userCredential
   
       const username = email.split('@')[0]; // Extract username from email
-  
+      dispatch(login({uid: user.uid, email: user.email}));
       // Store user details in Firebase Realtime Database
       await database().ref(`/users/${user.uid}`).set({
         uid: user.uid,
@@ -43,9 +43,10 @@ export const signIn = async (email, password, dispatch) => {
 /**
  * Sign out the current user
  */
-export const signOut = async () => {
+export const signOut = async (dispatch) => {
   try {
     await auth().signOut();
+    dispatch(login({uid: user.uid, email: user.email}));
   } catch (error) {
     throw error;
   }

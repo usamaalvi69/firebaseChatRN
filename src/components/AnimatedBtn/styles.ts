@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {ColorPane} from '../../theme/colorScheme';
-import { WPX } from '../../utils/responsiveness';
-import { screenWidth } from '../../constant/dimensions';
+import {HPX, WPX} from '../../utils/responsiveness';
+import {screenWidth} from '../../constant/dimensions';
 
 // Styles
 export const styles = StyleSheet.create({
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderRadius: 5,
   },
-  joinUs:{color: ColorPane.lightGrey, fontSize: WPX(14)},
+  joinUs: {color: ColorPane.lightGrey, fontSize: WPX(14)},
   errorText: {
     color: ColorPane.blaze,
     fontSize: 12,
@@ -45,14 +45,15 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     marginTop: 30,
-    gap: 8
+    gap: 8,
   },
   btn: {
     height: 60,
     width: screenWidth * 0.85,
     alignSelf: 'center',
     borderRadius: 10,
-    marginTop: 40,
+    marginTop: HPX(10),
+    marginBottom: HPX(15),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: ColorPane.parrot,

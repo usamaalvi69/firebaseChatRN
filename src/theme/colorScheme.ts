@@ -14,4 +14,5 @@ export const ColorPane = {
   primary: '#2E2739',
   white: '#FFF',
   timeText: '#999',
+  microsoft: '#0078D4',
 };
