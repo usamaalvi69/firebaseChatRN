@@ -3,10 +3,10 @@
 
 ## Screenshots
 <div style="display: flex; justify-content: space-between; gap: 10px;">
-  <img src="src/assets/app_screenshots/auth.png" width="20%">
-  <img src="src/assets/app_screenshots/users.png" width="20%">
-  <img src="src/assets/app_screenshots/chat.png" width="20%">
-   <img src="src/assets/app_screenshots/typing.png" width="20%">
+  <img src="src/assets/app_screenshots/auth.png" width="23%">
+  <img src="src/assets/app_screenshots/users.png" width="23%">
+  <img src="src/assets/app_screenshots/chat.png" width="23%">
+   <img src="src/assets/app_screenshots/typing.png" width="23%">
 </div>
 
 ## Overview
