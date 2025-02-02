@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {ColorPane} from '../../theme/colorScheme';
 
 export const styles = StyleSheet.create({
   container: {flex: 1},
@@ -24,5 +25,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 3,
   },
-  sendIcon:{justifyContent: 'center'}
+  sendIcon: {justifyContent: 'center'},
+  toolBar: {
+    backgroundColor: ColorPane.darkish,
+  },
+  composer: {
+    paddingHorizontal: 5,
+    color: ColorPane.white,
+  },
 });

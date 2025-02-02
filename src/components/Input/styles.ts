@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {ColorPane} from '../../theme/colorScheme';
+import { HPX } from '../../utils/responsiveness';
 
 // Styles
 export const styles = StyleSheet.create({
@@ -7,16 +8,18 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    width: '100%',
+    marginBottom: 10,
+    right: 5
   },
   input: {
-    width: '85%',
+    // width: '80%',
+    color: 'white',
     marginBottom: 20,
-    fontSize: 16,
+    fontSize: 18,
     padding: 10,
   },
   inputContainer: {
-    width: '82%',
+    width: '88%',
     bottom: 20,
     left: 45,
     position: 'absolute',
@@ -24,8 +27,8 @@ export const styles = StyleSheet.create({
   },
   errorContainer: {
     alignSelf: 'flex-end',
-    marginRight: 25,       
-    marginTop: -12,      
+    marginRight: 5,       
+    top: -HPX(18),      
   },
   errorText: {
     color: 'red',

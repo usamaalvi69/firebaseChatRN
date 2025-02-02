@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import {LogBox} from 'react-native';
+import { Provider } from 'react-redux';
+import MainStack from './MainStack';
+import store from './redux/store/store';
+LogBox.ignoreAllLogs();
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
-}
+    <Provider store={store}>
+      <MainStack />
+    </Provider>
+  );
+};
 
-export default App
-
+export default App;

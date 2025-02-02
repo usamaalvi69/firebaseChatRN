@@ -13,4 +13,5 @@ export const STRINGS = {
   submittingButtonText: 'Submitting...',
   joinedText: 'Joined us before?',
   alreadyJoinedText: "Don't have an account?",
+  Buffer: 'No error'
 };

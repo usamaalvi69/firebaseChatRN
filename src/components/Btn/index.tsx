@@ -22,7 +22,7 @@ export function Btn({onPress, label, disabled, style}: BtnProps) {
 const styles = StyleSheet.create({
   btn: {
     height: 60,
-    width: '90%',
+    width: '85%',
     alignSelf: 'center',
     borderRadius: 10,
     marginTop: 60,

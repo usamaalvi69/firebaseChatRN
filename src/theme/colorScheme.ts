@@ -8,5 +8,10 @@ export const ColorPane = {
   meadow: 'hsl(70, 100%, 39%)',
   plum: 'hsl(266, 58%, 56%)',
   placeHolder: '#202C434D',
-  primary: '#2E2739'
+  lightGrey: 'hsl(213, 15%, 60%)',
+  sender: 'hsl(150, 56%, 40%)',
+  receiver: 'hsl(213, 56%, 35%)',
+  primary: '#2E2739',
+  white: '#FFF',
+  timeText: '#999',
 };

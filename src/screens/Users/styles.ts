@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {HPX, WPX} from '../../utils/responsiveness';
+import {ColorPane} from '../../theme/colorScheme';
 
 const COLORS = {
   primary: '#BD725C',
@@ -20,7 +21,7 @@ export const createStyles = () =>
       backgroundColor: COLORS.primary,
     },
     list: {
-      marginTop: 10,
+      marginTop: 5,
       width: '100%',
       alignSelf: 'center',
     },
@@ -29,10 +30,11 @@ export const createStyles = () =>
       alignItems: 'center',
       justifyContent: 'space-between',
       //   gap: WPX(12),
-      backgroundColor: COLORS.white,
-      marginBottom: HPX(3),
-      padding: HPX(10),
-      borderRadius: WPX(5),
+      // backgroundColor: ColorPane.midnight,
+      marginBottom: HPX(1),
+      paddingHorizontal: WPX(15),
+      paddingVertical: HPX(10),
+      // borderRadius: WPX(5),
     },
     signout: {
       color: COLORS.red,
@@ -42,13 +44,14 @@ export const createStyles = () =>
       fontSize: WPX(24),
       fontWeight: '400',
     },
+    name: {fontWeight: '600', color: 'white'},
     header: {
       flexDirection: 'row',
-      height: HPX(60),
-      backgroundColor: COLORS.textPrimary,
+      height: HPX(64),
+      backgroundColor: ColorPane.midnight,
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingHorizontal: WPX(25),
+      paddingHorizontal: WPX(15),
     },
     title: {
       fontSize: WPX(20),
@@ -76,4 +79,5 @@ export const createStyles = () =>
     row: {flexDirection: 'row', alignItems: 'center', gap: 10},
 
     buffer: {width: WPX(30)},
+    logout: {position: 'absolute', bottom: 50, marginTop: 1},
   });

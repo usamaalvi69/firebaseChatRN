@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {HPX, WPX} from '../../utils/responsiveness';
+import { ColorPane } from '../../theme/colorScheme';
 
 /* @ts-ignore */
 export const createStyles = colors =>
@@ -8,22 +9,22 @@ export const createStyles = colors =>
       height: HPX(64),
       width: '100%',
       justifyContent: 'space-between',
-      backgroundColor: '#fff',
+      backgroundColor: ColorPane.midnight,
       flexDirection: 'row',
-      paddingHorizontal: 20,
+      paddingHorizontal: WPX(15),
       alignItems: 'center',
-      shadowColor: '#000',
-      shadowOffset: {width: 0, height: 2},
-      shadowOpacity: 0.2,
-      shadowRadius: 3,
-      elevation: 5,
+      // shadowColor: '#000',
+      // shadowOffset: {width: 0, height: 2},
+      // shadowOpacity: 0.2,
+      // shadowRadius: 3,
+      // elevation: 5,
     },
     subContainer: {
       flexDirection: 'row',
       alignItems: 'center',
     },
-    txt: {color: colors.black, fontSize: 16, fontWeight: 'bold'},
-    subtxt: {color: colors.subText, fontSize: 14},
+    txt: {color: 'white', fontSize: 16, fontWeight: 'bold'},
+    subtxt: {color: 'white', fontSize: 13},
 
     // Avatar (Initial Circle)
     avatar: {

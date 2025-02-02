@@ -4,6 +4,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useFormikContext} from 'formik';
 import {ColorPane} from '../../theme/colorScheme';
 import {styles} from './styles';
+import {STRINGS} from '../../utils/strings';
 
 interface InputProps {
   name: string;
@@ -27,7 +28,7 @@ export const Input: React.FC<InputProps> = ({
       <View style={styles.container}>
         <MaterialIcons
           size={25}
-          color={isFocused ? ColorPane.bluish : ColorPane.placeHolder}
+          color={isFocused ? ColorPane.white : ColorPane.lightGrey}
           style={{bottom: 12}}
           name={icon}
         />
@@ -37,8 +38,8 @@ export const Input: React.FC<InputProps> = ({
             {
               height: isFocused ? 1.5 : 1,
               backgroundColor: isFocused
-                ? ColorPane.bluish
-                : ColorPane.placeHolder,
+                ? ColorPane.white
+                : ColorPane.lightGrey,
             },
           ]}
         />
@@ -46,20 +47,30 @@ export const Input: React.FC<InputProps> = ({
           style={styles.input}
           placeholder={placeholder}
           value={values[name]}
-          onChangeText={handleChange(name)}
+          onChangeText={text =>
+            handleChange(name)(name === 'email' ? text.trim() : text)
+          }
+          placeholderTextColor={ColorPane.lightGrey}
           onBlur={() => {
             setIsFocused(false);
             setFieldTouched(name, true);
           }}
           onFocus={() => setIsFocused(true)}
+          autoCapitalize="none"
           secureTextEntry={secureTextEntry}
         />
       </View>
 
-      {touched[name] && errors[name] && (
+      {touched[name] && errors[name] ? (
         <View style={styles.errorContainer}>
           <Text style={styles.errorText}>
             {typeof errors[name] === 'string' ? errors[name] : ''}
+          </Text>
+        </View>
+      ) : (
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorText}>
+            <Text style={{color: ColorPane.darkish}}>{STRINGS.Buffer}</Text>
           </Text>
         </View>
       )}

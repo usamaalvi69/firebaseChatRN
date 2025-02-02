@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {createStyles} from './styles';
 import {useTheme} from '@react-navigation/native';
 import {capitalize} from '../../utils/helper';
+import {AvatarInitial} from '../AvatarInitial/AvatarInitial';
 
 interface HeaderProps {
   title: string;
@@ -22,22 +23,19 @@ export const Header: React.FC<HeaderProps> = ({
   const styles = createStyles(colors);
 
   // Get first initial
-  const initial = user ? user.charAt(0).toUpperCase() : '?';
+  // const initial = user ? user.charAt(0).toUpperCase() : '?';
 
   return (
     <View style={styles.header}>
       <Pressable style={styles.subContainer} onPress={onPress}>
-        <Icon name="arrow-back" size={24} color="black" />
+        <Icon name="arrow-back" size={24} color="white" />
         <View style={{marginLeft: 10}}>
           <Text style={styles.txt}>{capitalize(title)}</Text>
           <Text style={styles.subtxt}>{subTitle}</Text>
         </View>
       </Pressable>
 
-      {/* Circular Initial Avatar */}
-      <View style={styles.avatar}>
-        <Text style={styles.avatarText}>{initial}</Text>
-      </View>
+      <AvatarInitial name={user ?? ''} color="white"/>
     </View>
   );
 };

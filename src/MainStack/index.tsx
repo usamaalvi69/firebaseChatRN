@@ -1,28 +1,48 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import {useState, useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import { theme } from "../theme";
-import { useColorScheme } from "react-native";
+import {theme} from '../theme';
+import {useColorScheme} from 'react-native';
 
-import { Chat, Login, Users } from "../screens";
-
-import { NAVIGATION } from "../constant/navigation";
+import {Chat, Login, Users} from '../screens';
+import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
+import {NAVIGATION} from '../constant/navigation';
 
 const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
-  const scheme = useColorScheme();
+  const scheme = useColorScheme() as 'light' | 'dark';
+
+  const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
+
+  useEffect(() => {
+    // Subscribe to auth state changes
+    const unsubscribe = auth().onAuthStateChanged(
+      (authUser: FirebaseAuthTypes.User | null) => {
+        setUser(authUser);
+      },
+    );
+
+    // Cleanup function
+    return () => unsubscribe();
+  }, []);
 
   return (
     <NavigationContainer theme={theme[scheme]}>
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-        }}
-      >
-        <Stack.Screen name={NAVIGATION.AUTH} component={Login} />
-        <Stack.Screen name={NAVIGATION.USERS} component={Users} />
-        <Stack.Screen name={NAVIGATION.CHAT} component={Chat} />
+        }}>
+        {user ? (
+          <>
+            <Stack.Screen name={NAVIGATION.USERS} component={Users} />
+            {/* @ts-ignore */}
+            <Stack.Screen name={NAVIGATION.CHAT} component={Chat} />
+          </>
+        ) : (
+          <Stack.Screen name={NAVIGATION.AUTH} component={Login} />
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   );

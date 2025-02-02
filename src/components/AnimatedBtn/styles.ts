@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 import {ColorPane} from '../../theme/colorScheme';
 import { WPX } from '../../utils/responsiveness';
+import { screenWidth } from '../../constant/dimensions';
 
 // Styles
 export const styles = StyleSheet.create({
@@ -16,8 +17,6 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
   },
-  iconContainer:{flex: 0.7, justifyContent: 'center', alignItems: 'center'},
-  form:{flex: 1},
   input: {
     width: '80%',
     padding: 10,
@@ -50,10 +49,10 @@ export const styles = StyleSheet.create({
   },
   btn: {
     height: 60,
-    width: 300,
+    width: screenWidth * 0.85,
     alignSelf: 'center',
     borderRadius: 10,
-    marginTop: 60,
+    marginTop: 40,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: ColorPane.parrot,
