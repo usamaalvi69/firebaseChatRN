@@ -5,7 +5,7 @@ export const STRINGS = {
   SIGN_IN: 'Login',
   loginText: "Login",
   signupText: 'Register',
-  HEADER_TITLE: 'Real Db Chat',
+  HEADER_TITLE: 'Real Time Chat',
   ONLINE: 'Online',
   emailPlaceholder: 'Email',
   passwordPlaceholder: 'Password',
@@ -13,5 +13,6 @@ export const STRINGS = {
   submittingButtonText: 'Submitting...',
   joinedText: 'Joined us before?',
   alreadyJoinedText: "Don't have an account?",
-  Buffer: 'No error'
+  Buffer: 'No error',
+  LoginMicrosoft: 'Login with Microsoft'
 };

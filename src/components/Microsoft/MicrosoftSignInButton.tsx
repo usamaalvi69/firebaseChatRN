@@ -1,15 +1,16 @@
-import React from 'react';
-import {Pressable, Text, Image, StyleSheet, Alert} from 'react-native';
-import {images} from '../../assets/images';
-import {WPX} from '../../utils/responsiveness';
-import {ColorPane} from '../../theme/colorScheme';
+import React from "react";
+import { Pressable, Text, Image, StyleSheet, Alert } from "react-native";
+import { images } from "../../assets/images";
+import { WPX } from "../../utils/responsiveness";
+import { ColorPane } from "../../theme/colorScheme";
+import { STRINGS } from "../../utils/strings";
 
 export const MicrosoftSignInButton: React.FC = () => {
   const showAlert = () => {
     Alert.alert(
-      'Microsoft Login',
-      'You are about to log in using your Microsoft account. Please follow the prompts in read me.',
-      [{text: 'OK'}],
+      "Microsoft Login",
+      "You are about to log in using your Microsoft account. Please follow the prompts in read me.",
+      [{ text: "OK" }]
     );
   };
   return (
@@ -19,15 +20,15 @@ export const MicrosoftSignInButton: React.FC = () => {
         source={images.microSoft}
         style={styles.logo}
       />
-      <Text style={styles.microsoftText}>Login with Microsoft</Text>
+      <Text style={styles.microsoftText}>{STRINGS.LoginMicrosoft}</Text>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
   microsoftButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: WPX(40),
     paddingVertical: WPX(10),
     paddingHorizontal: WPX(20),
@@ -40,8 +41,8 @@ const styles = StyleSheet.create({
     width: WPX(35),
   },
   microsoftText: {
-    color: 'white',
+    color: "white",
     fontSize: WPX(14),
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });
