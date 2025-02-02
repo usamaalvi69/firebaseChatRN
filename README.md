@@ -1,4 +1,4 @@
-# Firebase Chat App (iOS Only)
+# Firebase Chat App
 
 
 ## Screenshots
